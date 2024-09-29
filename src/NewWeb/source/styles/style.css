@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url("../fonts/PressStart2P-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', sans-serif;
+}
+body{
+    background: #FDF5DF;
+    padding: 2rem;
+}
+
+.all{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.head{
+    width: 100%;
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+header{
+    padding: 0.5rem;
+}
+
+.main-container{
+    height: min-content;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.input-container{
+    font-size: 1.3rem;
+    place-items: center;
+    display: grid;
+    grid-template:
+            "X C"
+            "Y C"
+            "R C";
+}
+
+
+.R_table_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.R_table_container input{
+    transform:scale(1.4);
+    opacity:0.9;
+    cursor:pointer;
+}
+
+.input_XYR{
+    width: 90%;
+    height: 80%;
+    margin: 1rem 0.5rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.input_XYR>label{
+    align-content: center;
+}
+
+.R_table_container{
+    align-content: center;
+}
+
+.R_table_container input{
+    /*box-shadow: 0 0 10px #90908f;*/
+}
+
+.form_radio{
+    margin: 0.2rem;
+}
+
+.element{
+    background: #5EBEC4;
+    border: 0.1rem dashed;
+    border-radius: 1rem;
+}
+
+.input{
+    margin: 1rem;
+    height: 1.5rem;
+    width: 70%;
+    border-radius: 5px;
+    /*box-shadow: 0 0 10px #90908f;*/
+}
+
+.canvas-container{
+    grid-area: C;
+    height: 400px;
+    width: 400px;
+    margin: 0.5rem 2rem 1rem 0;
+    display: grid;
+    place-items: center;
+}
+
+.input_text{
+    text-align: right;
+}
+
+.button-container{
+    width: 50%;
+    margin: 1rem 0 1rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    align-items: center;
+}
+
+
+
+.buttons{
+    background: #F92C85;
+    width: 80%;
+    height: 120%;
+    font-size: 2rem;
+    border: 0.1rem dashed;
+    border-radius: 0.5rem;
+}
+
+.buttons:active{
+    background: #ff0100;
+}
+
+@media  (max-width: 1200px) {
+    .input-container {
+        height: 100%;
+        display: grid;
+        grid-template:
+            "X"
+            "Y"
+            "R"
+            "C"
+    }
+    .button-container{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.input-X{
+    grid-area: X;
+}
+
+.input-Y{
+    grid-area: Y;
+}
+
+.input-R{
+    grid-area: R;
+}
+
+.canvas{
+    display: inline-block;
+}
+#head-table{
+    background: #5EBEC4;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.table{
+    width: 100%;
+    background: #bacccc;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.result-table{
+    margin: 0.5rem 3rem 0 0;
+    border-radius: 1rem 1rem 0 0;
+    border: 0.1rem dashed;
+    height: min-content;
+}
+
+@media  (max-width: 2000px) {
+    .main-container{
+        width: 100%;
+    }
+    .all{
+        grid-template-columns: 1fr;
+    }
+    .head-table{
+        width: 100%;
+    }
+    .result-table{
+        margin: 1rem 5rem 0 5rem;
+    }
+}
+
+.table td{
+    padding: 0 0.5rem 0 0.5rem;
+}

@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+}
+body {
+    background: #FDF5DF;
+    font-size: 0.8vw;
+    width: 100%;
+    min-height: 100vh;
+}
+h1 {
+    font-size: 2vw;
+}
+h3 {
+    font-size: 0.8vw;
+}
+[class^="box-"] {
+    display: grid;
+    background: #5EBEC4;
+    border: 1px dashed;
+    border-radius: 10px;
+    place-items: center;
+}
+.container {
+    padding: 0.8vw;
+    display: grid;
+    gap: 0.8vw;
+    height: 80vh;
+    grid-template:
+            "H H H"
+            "R C C"
+            "Y C C"
+            "X C C"
+            ". B1 .";
+}
+.box-head {
+    grid-area: H;
+}
+.box-input-X{
+    grid-area: X;
+}
+.box-input-Y{
+    grid-area: Y;
+}
+.box-input-R{
+    grid-area: R;
+}
+.box-button-box{
+    background: #F92C85;
+    height: 50%;
+    grid-area: B1;
+    font-size: 1.6vw;
+}
+.box-canvas{
+    padding: 1rem;
+    grid-area: C;
+}
+.Y-select {
+    padding: 0.4vw;
+    font-size: 0.8vw;
+    width: 70%;
+}
+.R-select{
+    padding: 0.4vw;
+    font-size: 0.8vw;
+}
+.X-select{
+    width: 70%;
+    padding: 0.4vw;
+    font-size: 0.8vw;
+}

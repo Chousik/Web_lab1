@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Лабораторная работа №1</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="box-head">Силаев Захар Алексеевич P3210 409555</h1>
+    <div class="box-input-X">
+        <label>
+            <p>
+            <h3>Выберите значение X:</h3>
+            <input required name="Y-input" type="text"
+                   placeholder="-3..5" maxlength="6" class="X-select">
+            </p>
+        </label>
+    </div>
+
+    <div class="box-input-Y element">
+        <label>
+            <h3>Выберите значение Y:</h3>
+            <select class="Y-select">
+                <option value="-5">-5</option>
+                <option value="-4">-4</option>
+                <option value="-3">-3</option>
+                <option value="-2">-2</option>
+                <option value="-1">-1</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </label>
+    </div>
+    <div class="box-input-R element">
+        <label><h3>Выберите значение R:</h3>
+            <p class="R-select">    
+                <input type="radio" name="R" value="2">2<br>
+                <input type="radio" name="R" value="3">3<br>
+                <input type="radio" name="R" value="4">4<br>
+                <input type="radio" name="R" value="5">5<br>
+            </p>
+        </label>
+    </div>
+    <button type="button" class="box-button-box">Проверить</button>
+    <div class="box-canvas element" id = "cnv-box">
+        <canvas id = "canvas" class="canvas">Your browser is not supported</canvas>
+        <script type="module" src="cnv.js"></script>
+    </div>
+</div>
+</body>
+</html>

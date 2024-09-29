@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="source/styles/style.css">
+    <title>Лабораторная работа №1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="source/scripts/validator.js"></script>
+    <script src="source/scripts/run.js"></script>
+</head>
+<body>
+<div class="head">
+    <header class="element">
+        <h1>Silaev Zahar P3210 409555 V-488781</h1>
+    </header>
+</div>
+    <div class="all">
+        <div class="main-container">
+            <div class="input-container">
+                <div class="input_XYR element">
+                    <label for="R_table" class="input_text">Choose X:</label>
+                    <div class="R_table_container" id = "R_table">
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_-3" type="radio" name="R" value="-3">
+                                <label for="radio_-3">-3</label>
+                            </label>
+                        </div>
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_-2" type="radio" name="R" value="-2">
+                                <label for="radio_-2">-2</label>
+                            </label>
+                        </div>
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_-1" type="radio" name="R" value="-1">
+                                <label for="radio_-1">-1</label>
+                            </label>
+                        </div>
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_0" type="radio" name="R" value="0" >
+                                <label for="radio_0">0</label>
+                            </label>
+                        </div>
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_1" type="radio" name="R" value="1">
+                                <label for="radio_1">1</label>
+                            </label>
+                        </div>
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_2" type="radio" name="R" value="2">
+                                <label for="radio_2">2</label>
+                            </label>
+                        </div>
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_3" type="radio" name="R" value="3">
+                                <label for="radio_3">3</label>
+                            </label>
+                        </div>
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_4" type="radio" name="R" value="4">
+                                <label for="radio_4">4</label>
+                            </label>
+                        </div>
+                        <div class="form_radio">
+                            <label>
+                                <input id = "radio_5" type="radio" name="R" value="5">
+                                <label for="radio_5">5</label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input_XYR element">
+                    <label for="Y_input" class="input_text">Input Y:</label>
+                    <label>
+                        <input required name="Y-input" id = "Y_input" type="text" placeholder="-5..5" class="input">
+                    </label>
+                </div>
+                <div class="input_XYR element">
+                    <label for="R_input" class="input_text">Input R:</label>
+                    <label>
+                        <input required name="R-input" id = "R_input" type="text" placeholder="2..5" class="input">
+                    </label>
+                </div>
+                <div class="canvas-container element" id="canvas-container">
+                    <canvas id = "canvas" class="canvas">Your browser is not supported</canvas>
+                    <script type="module" src="source/scripts/canvas.js"></script>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="button" class="buttons" id="check_button">Check</button>
+                <button type="button" class="buttons" id="clear_button">Clear</button>
+            </div>
+        </div>
+        <div class="result-table">
+            <table id="head-table" class="table">
+                <tr>
+                    <td>x</td>
+                    <td>y</td>
+                    <td>r</td>
+                    <td>status</td>
+                    <td>current time</td>
+                    <td>script runtime</td>
+                </tr>
+            </table>
+            <table id="result_table" class="table">
+                <tr>
+                    <td>x</td>
+                    <td>y</td>
+                    <td>r</td>
+                    <td>status</td>
+                    <td>current time</td>
+                    <td>script runtime</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
