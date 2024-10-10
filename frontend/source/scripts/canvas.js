@@ -43,12 +43,12 @@ ctx.strokeText("R", 185, 65)
 ctx.strokeText("R/2", 185, 125)
 ctx.strokeText("-R/2", 185, 244)
 ctx.strokeText("-R", 185, 304)
-function canvas_arrow(context, fromx, fromy, tox, toy) {
+function canvas_arrow(context, fromX, fromY, tox, toy) {
     const headmen = 10;
-    const dx = tox - fromx;
-    const dy = toy - fromy;
+    const dx = tox - fromX;
+    const dy = toy - fromY;
     const angle = Math.atan2(dy, dx);
-    context.moveTo(fromx, fromy);
+    context.moveTo(fromX, fromY);
     context.lineTo(tox, toy);
     context.lineTo(tox - headmen * Math.cos(angle - Math.PI / 6), toy - headmen * Math.sin(angle - Math.PI / 6));
     context.moveTo(tox, toy);

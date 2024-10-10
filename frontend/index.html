@@ -7,7 +7,7 @@
     <title>Лабораторная работа №1</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="source/scripts/validator.js"></script>
-    <script src="source/scripts/run.js"></script>
+    <script src="source/scripts/main.js"></script>
 </head>
 <body>
 <div class="head">
@@ -60,7 +60,7 @@
                         <div class="form_radio">
                             <label>
                                 <input id = "radio_3" type="radio" name="R" value="3">
-                                <label for="radio_3">3</label>
+                                <label for="radio_3"">3</label>
                             </label>
                         </div>
                         <div class="form_radio">
@@ -100,18 +100,8 @@
             </div>
         </div>
         <div class="result-table">
-            <table id="head-table" class="table">
-                <tr>
-                    <td>x</td>
-                    <td>y</td>
-                    <td>r</td>
-                    <td>status</td>
-                    <td>current time</td>
-                    <td>script runtime</td>
-                </tr>
-            </table>
             <table id="result_table" class="table">
-                <tr>
+                <tr id="head-table">
                     <td>x</td>
                     <td>y</td>
                     <td>r</td>
