@@ -1,13 +1,14 @@
 function validateX() {
-    const radios = document.querySelectorAll('input[type=radio]');
+    let radios = document.querySelectorAll('input[type=radio]');
     for (let radio of radios) {
         if (radio.checked) {
             return true;
 
         }
     }
-    radios[7].setCustomValidity("Please choose X");
-    radios[7].reportValidity();
+    let radio = document.getElementById("radio_4")
+    radio.setCustomValidity("Please choose X");
+    radio.reportValidity();
     return false;
 }
 

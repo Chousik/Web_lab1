@@ -75,9 +75,6 @@ header{
     align-content: center;
 }
 
-.R_table_container input{
-    /*box-shadow: 0 0 10px #90908f;*/
-}
 
 .form_radio{
     margin: 0.2rem;
@@ -90,6 +87,7 @@ header{
 }
 
 .input{
+    font-size: 1.3rem;
     margin: 1rem;
     height: 1.5rem;
     width: 70%;
@@ -134,6 +132,7 @@ header{
     background: #ff0100;
 }
 
+
 @media  (max-width: 1200px) {
     .input-container {
         height: 100%;
@@ -165,23 +164,24 @@ header{
 .canvas{
     display: inline-block;
 }
-#head-table{
-    background: #5EBEC4;
-    border-radius: 1rem 1rem 0 0;
-}
 
 .table{
     width: 100%;
-    background: #bacccc;
     font-size: 1.8rem;
     text-align: center;
 }
 
 .result-table{
     margin: 0.5rem 3rem 0 0;
-    border-radius: 1rem 1rem 0 0;
-    border: 0.1rem dashed;
     height: min-content;
+}
+
+.result-table{
+    background: #bacccc;
+}
+
+#head-table{
+    background: #5EBEC4;
 }
 
 @media  (max-width: 2000px) {
@@ -190,9 +190,6 @@ header{
     }
     .all{
         grid-template-columns: 1fr;
-    }
-    .head-table{
-        width: 100%;
     }
     .result-table{
         margin: 1rem 5rem 0 5rem;
