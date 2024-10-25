@@ -1,7 +1,7 @@
 FROM gradle:7.2.0 AS builder
 COPY . /app
 WORKDIR /app
-RUN gradlew fatJar
+RUN gradle fatJar
 
 FROM openjdk:17-jdk-slim
 COPY --from=builder /app/build/libs/backend-1.0-standalone.jar .
