@@ -24,7 +24,7 @@ services:
     expose:
       - "80"
     ports:
-      - "8080:80"
+      - "1488:80"
     depends_on:
       - backend
     networks:
