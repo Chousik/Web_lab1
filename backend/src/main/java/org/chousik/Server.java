@@ -18,6 +18,15 @@ public class Server {
 
     private static final String httpsResponsePattern = """
             HTTP/1.1 200 OK
+            Status: 200
+            Content-Type: application/json
+            Content-Length: %d
+            
+            %s
+            """;
+    private static final String errHttpsResponsePattern = """
+            HTTP/1.1 400 OK
+            Status: 400
             Content-Type: application/json
             Content-Length: %d
             
@@ -30,13 +39,6 @@ public class Server {
                 "executionTime": "%s",
                 "time": "%s"
             }
-            """;
-    private static final String httpsErrorPattern = """
-            HTTP/1.1 400 BAD REQUEST
-            Content-Type: application/json
-            Content-Length: %d
-            
-            %s
             """;
     private static final String errorPattern = """
             {
@@ -85,7 +87,7 @@ public class Server {
 
     private void sendError(String message) throws IOException{
         var error = errorPattern.formatted(message);
-        var httpsError = httpsErrorPattern.formatted(error.getBytes(StandardCharsets.UTF_8).length, error);
+        var httpsError = errHttpsResponsePattern.formatted(error.getBytes(StandardCharsets.UTF_8).length, error);
         FCGIInterface.request.outStream.write(httpsError.getBytes(StandardCharsets.UTF_8));
     }
 
