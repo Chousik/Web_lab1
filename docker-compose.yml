@@ -1,0 +1,36 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    expose:
+      - "1487"
+    networks:
+      - it-mo
+#  apache:
+#    build:
+#      context: ./
+#      dockerfile: ./Dockerfile
+#    expose:
+#      - "8080"
+#    ports:
+#      - "8080:8080"
+#    networks:
+#      - it-mo
+  nginx:
+    restart: always
+    build:
+      context: ./
+      dockerfile: ./nginx/Dockerfile
+    expose:
+      - "80"
+    ports:
+      - "1488:80"
+    depends_on:
+      - backend
+    networks:
+      - it-mo
+
+
+networks:
+  it-mo:
+    driver: bridge

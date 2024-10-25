@@ -1,9 +1,9 @@
-package org.chousik.chousik;
+package org.chousik;
 
 public class Data {
-    private int x;
-    private double y;
-    private double r;
+    private final int x;
+    private final double y;
+    private final double r;
 
     public Data(int x, double y, double r){
         this.x = x;
